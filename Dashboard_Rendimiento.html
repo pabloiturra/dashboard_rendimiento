@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indicadores de Desempeño</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="background-image: linear-gradient(90deg,green,#73b700);">
+    <div class="container" style="margin-left:10%!important;">
+        <ul class="navbar-nav me-auto" style="margin-right: 5%!important; ">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white;">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="http://localhost/Andamios/Solicitud">Nueva Solicitud</a></li>
+                    <li><a class="dropdown-item" href="http://localhost/Andamios/ProgramaSemanal">Programa Semanal</a></li>
+                    <li><a class="dropdown-item" href="http://localhost/Andamios">Control de Andamios</a></li>
+                    <li><a class="dropdown-item" href="http://localhost/Andamios/Mapa">Mapa</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="http://localhost/AreaMayor">Áreas</a></li>
+                    <li><a class="dropdown-item" href="http://localhost/clients">Cliente</a></li>
+                    <li><a class="dropdown-item" href="http://localhost/users">Usuarios</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="http://localhost/EstadoAndamio">Estados</a></li>
+                    <li><a class="dropdown-item" href="http://localhost/PrecioAndamios">Precio</a></li>
+                    <li><a class="dropdown-item" href="http://localhost/TipoMantencionAndamio">Tipo Mantención</a></li>
+                    <li><a class="dropdown-item" href="http://localhost/EstadoAccionAndamio">Acciones en curso</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="http://localhost/roles">Roles</a></li>
+                    <li><a class="dropdown-item" href="http://localhost/permissions">Permisos</a></li>
+
+                </ul>
+            </li>
+        </ul>
+        <a class="navbar-brand" href="http://localhost/home" style="color:white;">
+            SGA
+        </a>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-light" type="submit">Buscar</button>
+        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left Side Of Navbar -->
+
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ms-auto">
+                <!-- Authentication Links -->
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre="" style="color:white;">
+                        Pablo Iturra
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="background-image: linear-gradient(90deg,#3A8437,#73b700)!important;">
+                        <a class="dropdown-item" href="http://localhost/logout" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        Cerrar sesión
+                    </a>
+
+                    <form id="logout-form" action="http://localhost/logout" method="POST" class="d-none">
+                        <input type="hidden" name="_token" value="XQkrZfywbwtLBPclfjRkz2FVQIC9VhVpRpXzUsQX">
+                    </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <!-- /.navbar -->
+
+  
+
+  <!-- Content Wrapper. Contains page content -->
+
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Indicadores de Desempeño</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard v2</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-2">
+                <div class="info-box">
+                  <span class="info-box-icon bg-info elevation-1"><i class="fas fa-chart-line"></i></span>
+    
+                  <div class="info-box-content">
+                    <span class="info-box-text">FTP</span>
+                    <span class="info-box-number">
+                      20
+                      <small>%</small>
+                    </span>
+                  </div>
+                  <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+              </div>
+              <!-- /.col -->
+            <div class="col-12 col-sm-6 col-md-2">
+                <div class="info-box">
+                  <span class="info-box-icon bg-success elevation-1"><i class="fas fa-clipboard-list"></i></span>
+    
+                  <div class="info-box-content">
+                    <span class="info-box-text">Presupuesto</span>
+                    <span class="info-box-number">
+                      $900.000
+                      
+                    </span>
+                  </div>
+                  <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+              </div>
+              <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-2">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-tape"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">m3</span>
+                <span class="info-box-number">52,76</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
+
+          <div class="col-12 col-sm-6 col-md-2">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-primary elevation-1"><i class="fas fa-file-invoice-dollar"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Precio por m3</span>
+                <span class="info-box-number">$9.372</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-2">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-dollar-sign"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Costo Total</span>
+                <span class="info-box-number">$494.467</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-2">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-chart-pie"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">TCPI</span>
+                <span class="info-box-number">
+                  100
+                  <small>%</small>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Reporte en Línea</h5>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="text-center">
+                      <strong>Periodo: 12 Abril, 2022 - 12 Mayo, 2022</strong>
+                    </p>
+
+                    <div class="chart">
+                      <!-- Sales Chart Canvas -->
+                      <canvas id="salesChart" height="180" style="height: 180px;"></canvas>
+                    </div>
+                    <!-- /.chart-responsive -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-md-4">
+                    <p class="text-center">
+                      <strong>Planta Química</strong>
+                    </p>
+
+                    <div class="progress-group">
+                      Andamio 1
+                      <span class="float-right"><b>160</b>/200</span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-primary" style="width: 80%"></div>
+                      </div>
+                    </div>
+                    <!-- /.progress-group -->
+
+                    <div class="progress-group">
+                      Andamio 2
+                      <span class="float-right"><b>360</b>/400</span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-danger" style="width: 90%"></div>
+                      </div>
+                    </div>
+
+                    <!-- /.progress-group -->
+                    <div class="progress-group">
+                      <span class="progress-text">Andamio 3</span>
+                      <span class="float-right"><b>480</b>/800</span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-success" style="width: 60%"></div>
+                      </div>
+                    </div>
+
+                    <!-- /.progress-group -->
+                    <div class="progress-group">
+                      Andamio 4
+                      <span class="float-right"><b>400</b>/500</span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-warning" style="width: 80%"></div>
+                      </div>
+                    </div>
+                    <!-- /.progress-group -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- ./card-body -->
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-sm-2 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-success"><i class="fas fa-caret-right"></i> 17%</span>
+                      <h5 class="description-header">$180.000</h5>
+                      <span class="description-text">EV</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-2 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-success"><i class="fas fa-caret-right"></i> 0%</span>
+                      <h5 class="description-header">$360.000</h5>
+                      <span class="description-text">PV</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-2 col-6">
+                    <div class="description-block border-right">
+                      <span class="description-percentage text-warning"><i class="fas fa-caret-down"></i> 20%</span>
+                      <h5 class="description-header">$-180.000</h5>
+                      <span class="description-text">SV</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-2 col-6">
+                    <div class="description-block">
+                      <span class="description-percentage text-danger"><i class="fas fa-caret-down"></i> 18%</span>
+                      <h5 class="description-header">$-314.466,72</h5>
+                      <span class="description-text">CV</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <div class="col-sm-2 col-6">
+                    <div class="description-block">
+                      <span class="description-percentage text-info"><i class="fas fa-caret-right"></i> 18%</span>
+                      <h5 class="description-header">0,4</h5>
+                      <span class="description-text">CPI</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <div class="col-sm-2 col-6">
+                    <div class="description-block">
+                      <span class="description-percentage text-info"><i class="fas fa-caret-right"></i> 18%</span>
+                      <h5 class="description-header">0,5</h5>
+                      <span class="description-text">SPI</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Footer -->
+  <footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Powered by &copy; SIAMEC </span>
+        </div>
+    </div>
+  </footer>
+<!-- End of Footer -->
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<script src="dist/js/pages/dashboard2.js"></script>
+</body>
+</html>
